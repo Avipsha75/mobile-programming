@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATM Machine</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial;
+            background: linear-gradient(135deg, #141e30, #243b55);
+        }
+
+        .atm {
+            width: 340px;
+            background: #1f2937;
+            padding: 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+
+        h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .screen {
+            background: #0f172a;
+            color: #22c55e;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            margin-top: 10px;
+            outline: none;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .deposit {
+            background: #22c55e;
+            color: white;
+        }
+
+        .withdraw {
+            background: #ef4444;
+            color: white;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        #status {
+            margin-top: 10px;
+            text-align: center;
+            color: #facc15;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="atm">
+
+    <h2>ATM MACHINE</h2>
+
+    <div class="screen" id="money">
+        Balance: Rs. 10000
+    </div>
+
+    <input type="number" id="cash" placeholder="Enter amount">
+
+    <div class="buttons">
+        <button class="deposit" onclick="addMoney()">Deposit</button>
+        <button class="withdraw" onclick="takeMoney()">Withdraw</button>
+    </div>
+
+    <div id="status"></div>
+
+</div>
+
+<script src="atm.js"></script>
+
+</body>
+</html>
