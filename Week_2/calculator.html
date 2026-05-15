@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Calculator</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 60px;
+            background-color: #f4f4f4;
+        }
+
+        .box {
+            background-color: white;
+            width: 250px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h2>Mini Calculator</h2>
+
+        <input type="number" id="num1" placeholder="First Number">
+
+        <input type="number" id="num2" placeholder="Second Number">
+
+        <br><br>
+
+        <button onclick="showResult('+')">+</button>
+        <button onclick="showResult('-')">-</button>
+        <button onclick="showResult('*')">*</button>
+        <button onclick="showResult('/')">/</button>
+
+        <h3 id="answer">Answer:</h3>
+
+    </div>
+
+    <script src="calculate.js"></script>
+
+</body>
+</html>
