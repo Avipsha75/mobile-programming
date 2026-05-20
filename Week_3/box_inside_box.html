@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-box {
+    width: 400px;
+    height: 300px;
+    border: 3px solid black;
+    position: relative;
+}
+
+.small-box {
+    width: 50px;
+    height: 50px;
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="big-box">
+    <div class="small-box"></div>
+</div>
+
+<button>Start Animation</button>
+
+<script>
+$(document).ready(function(){
+
+    $("button").click(function(){
+
+        $(".small-box").animate({ top: "250px", left: "0px" }, 800, function () {
+
+            $(".small-box").css("background-color", "blue");
+            $(".big-box").css("background-color", "purple");
+
+            $(this).animate({ top: "250px", left: "350px" }, 800, function () {
+
+                $(".small-box").css("background-color", "green");
+                $(".big-box").css("background-color", "orange");
+
+                $(this).animate({ top: "0px", left: "350px" }, 800, function () {
+
+                    $(".small-box").css("background-color", "orange");
+                    $(".big-box").css("background-color", "green");
+
+                    $(this).animate({ top: "0px", left: "0px" }, 800, function () {
+
+                        $(".small-box").css("background-color", "purple");
+                        $(".big-box").css("background-color", "blue");
+
+                    });
+
+                });
+
+            });
+
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>
