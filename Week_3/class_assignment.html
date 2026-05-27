@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Assignment</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <style>
+    #profile-card{
+      width: 300px;
+      padding: 20px;
+      border: 2px solid black;
+      background-color: white;
+      margin: 20px;
+    }
+
+    #profile-photo{
+      width: 150px;
+      height: 120px;
+    }
+
+    .highlighted {
+    background-color: yellow !important;
+    border: 5px solid orange !important;
+    }
+
+    .dark-mode{
+      background-color: black;
+      color: white;
+    }
+
+    .rounded{
+      border-radius: 50%;
+    }
+
+    .shadow{
+      box-shadow: 0px 0px 10px gray;
+    }
+
+    button{
+      margin: 5px;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function(){
+
+      $("#show_name").click(function(){
+        $("#output").text($("#student-name").text());
+      });
+
+      $("#change_name").click(function(){
+        $("#student-name").text("Avipsha Shrestha");
+      });
+
+      $("#show_bio").click(function(){
+        $("#output").text($("#student-bio").html());
+      });
+
+      $("#get_input").click(function(){
+        $("#output").text($("#nickname-input").val());
+      });
+
+      $("#set_input").click(function(){
+        $("#nickname-input").val("jQuery Pro");
+      });
+
+      $("#highlight_card").click(function(){
+        $("#profile-card").removeClass("dark-mode");
+        $("#profile-card").css("background-color", ""); 
+        $("#profile-card").addClass("highlighted");
+      });
+
+      $("#remove_highlight").click(function(){
+        $("#profile-card").removeClass("highlighted");
+      });
+
+      $("#dark_mode").click(function(){
+        $("#profile-card").toggleClass("dark-mode");
+      });
+
+      $("#toggle_rounded").click(function(){
+        $("#profile-photo").toggleClass("rounded");
+      });
+
+      $("#red_background").click(function(){
+        $("#profile-card").css("background-color", "#e74c3c"); 
+        $("#profile-card").removeClass("highlighted dark-mode");
+      });
+
+      $("#reset_background").click(function(){
+        $("#profile-card").css("background-color", "white");
+        $("#profile-card").removeClass("highlighted dark-mode");
+      });
+
+      $("#hide_photo").click(function(){
+        $("#profile-photo").hide("slow");
+      });
+
+      $("#show_photo").click(function(){
+        $("#profile-photo").show("slow");
+      });
+
+      $("#toggle_bio").click(function(){
+        $("#student-bio").toggle();
+      });
+
+      $("#fade_out").click(function(){
+        $("#profile-card").fadeOut();
+      });
+
+      $("#fade_in").click(function(){
+        $("#profile-card").fadeIn();
+      });
+
+      $("#fade_50").click(function(){
+        $("#profile-card").fadeTo("slow", 0.5);
+      });
+
+      $("#slide_up").click(function(){
+        $("#skills-list").slideUp();
+      });
+
+      $("#slide_down").click(function(){
+        $("#skills-list").slideDown();
+      });
+
+      $("#slide_toggle").click(function(){
+        $("#skills-list").slideToggle();
+      });
+
+      $("#animate_card").click(function(){
+        $("#profile-card")
+          .animate({marginLeft: "200px"}, 1000)
+          .animate({marginLeft: "0px"}, 1000);
+      });
+
+      $("#profile-photo").mouseenter(function(){
+        $("#profile-photo").addClass("shadow");
+      });
+
+      $("#profile-photo").mouseleave(function(){
+        $("#profile-photo").removeClass("shadow");
+      });
+
+      $("#nickname-input").keypress(function(event){
+        $("#output").text("Pressed Key: " + event.key);
+      });
+
+    });
+  </script>
+
+</head>
+
+<body>
+
+<div id="profile-card">
+
+  <h2 id="student-name">Harry Potter Fan</h2>
+
+  <p id="student-bio">
+    I love Web Development and jQuery.
+  </p>
+
+ <img id="profile-photo" src="my_photo.png">
+
+  <br><br>
+
+  <input type="text" id="nickname-input" placeholder="Enter nickname">
+
+  <ul id="skills-list">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+
+</div>
+
+<h3 id="output"></h3>
+
+<button id="show_name">Show Name</button>
+<button id="change_name">Change Name</button>
+<button id="show_bio">Show Bio</button>
+<button id="get_input">Get Input</button>
+<button id="set_input">Set Input</button>
+
+<br><br>
+
+<button id="highlight_card">Highlight Card</button>
+<button id="remove_highlight">Remove Highlight</button>
+<button id="dark_mode">Toggle Dark Mode</button>
+<button id="toggle_rounded">Toggle Rounded</button>
+
+<br><br>
+
+<button id="red_background">Red Background</button>
+<button id="reset_background">Reset Background</button>
+
+<br><br>
+
+<button id="hide_photo">Hide Photo</button>
+<button id="show_photo">Show Photo</button>
+<button id="toggle_bio">Toggle Bio</button>
+
+<br><br>
+
+<button id="fade_out">Fade Out Card</button>
+<button id="fade_in">Fade In Card</button>
+<button id="fade_50">Fade to 50%</button>
+
+<br><br>
+
+<button id="slide_up">Slide Up Skills</button>
+<button id="slide_down">Slide Down Skills</button>
+<button id="slide_toggle">Slide Toggle Skills</button>
+
+<br><br>
+
+<button id="animate_card">Animate Card</button>
+
+</body>
+</html>
