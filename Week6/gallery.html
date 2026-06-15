@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 100%;
+  padding: 10px;
+}
+
+.column img {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 600px) {
+  .column {
+    flex: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .column {
+    flex: 25%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive Image Gallery</h2>
+
+<div class="container">
+  <div class="column">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqOtJo4fJcJFBBkSKqvXQEc4V02Iiioc27rR6JwAxfarADMB7nDAmHqXE&s=10" alt="Image 1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-2M2R6Ttr7myB7dZCJGegvwBqFSbamtxpNLrW0fETkg&s" alt="Image 2">
+  </div>
+
+  <div class="column">
+    <img src="https://media.istockphoto.com/id/2207141986/photo/ai-governance-and-responsive-generative-artificial-intelligence-use-compliance-strategy-and.jpg?s=612x612&w=0&k=20&c=JK0ezw-lui-0gxbKB2rWqUMD3gza0pUI_aeb7-GkFBI=" alt="Image 3">
+    <img src="https://cdn.britannica.com/47/246247-050-F1021DE9/AI-text-to-image-photo-robot-with-computer.jpg" alt="Image 4">
+  </div>
+
+  <div class="column">
+    <img src="https://ideas.darden.virginia.edu/sites/default/files/styles/full_width_1024px_5_3_/public/2024-09/AI%20ART%20ITA.jpg?itok=CIaF2iIX" alt="Image 5">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3IqhribgRiFCUgPMNBMaVyvoybBhQR-nsnLRWig01Lw&s" alt="Image 6">
+  </div>
+
+  <div class="column">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ-JHP_Qov5NeySRYsQaW-pRZW9UiYtVahYbla8e3xlHitmp3Q20_w1m8&s=10" alt="Image 7">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtMmFulRTKXCawE_-BHUA953VxhkSpFTru7aGYIW-IeeWcRX9ZgMV3AE8&s=10" alt="Image 8">
+  </div>
+</div>
+
+</body>
+</html>
