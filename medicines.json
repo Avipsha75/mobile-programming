@@ -1,0 +1,44 @@
+{
+  "medicines": {
+    "medicine1": {
+      "name": "Paracetamol 600mg Tablet",
+      "genericName": "Paracetamol",
+      "price": 50,
+      "description": "Used for pain relief and fever reduction",
+      "dosage": "Take 1 tablet every 6 hours as needed",
+      "category": "Pain Relief"
+    },
+    "medicine2": {
+      "name": "Vitamin C 600mg Tablet",
+      "genericName": "Ascorbic Acid",
+      "price": 30,
+      "description": "Boosts immune system and helps fight infections",
+      "dosage": "Take 1 tablet daily with food",
+      "category": "Vitamins"
+    },
+    "medicine3": {
+      "name": "Ibuprofen 600mg Tablet",
+      "genericName": "Ibuprofen",
+      "price": 45,
+      "description": "Anti-inflammatory pain reliever",
+      "dosage": "Take 1 tablet every 8 hours with food",
+      "category": "Pain Relief"
+    },
+    "medicine4": {
+      "name": "Amoxicillin 500mg Capsule",
+      "genericName": "Amoxicillin",
+      "price": 80,
+      "description": "Antibiotic used to treat bacterial infections",
+      "dosage": "Take 1 capsule every 8 hours for 7 days",
+      "category": "Antibiotics"
+    },
+    "medicine5": {
+      "name": "Omeprazole 20mg Tablet",
+      "genericName": "Omeprazole",
+      "price": 60,
+      "description": "Treats acid reflux and stomach ulcers",
+      "dosage": "Take 1 tablet daily before breakfast",
+      "category": "Gastrointestinal"
+    }
+  }
+}
